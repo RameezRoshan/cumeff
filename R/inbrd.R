@@ -1,4 +1,17 @@
 # Function to calculate Ne, inbreeding per generation, and cumulative inbreeding
+#' Calculate population average inbreeding from effective population size
+#'
+#' @param Nm A numeric vector of number of male parents contributing offspring in each generation
+#' @param Nf A numeric vector of number of female parents contributing offspring in each generation
+#'
+#' @return A data frame
+#' @export
+#'
+#' @examples
+#' Nm <- c(26,40,32,32,58,54,54,64,16)  # Number of male parents in each generation
+#' Nf <- c(16,40,40,40,64,54,54,54,18)  # Number of female parents in each generation
+#' result <- calculate_inbreeding(Nm, Nf)
+#' print(result)
 calculate_inbreeding <- function(Nm, Nf) {
   # Number of generations
   n <- length(Nm)
